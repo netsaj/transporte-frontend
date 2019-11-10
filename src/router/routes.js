@@ -1,20 +1,16 @@
+import Login from "../pages/Login";
+import Home from "../pages/Home";
 
-const routes = [
+export default [
+
   {
     path: '/',
-    component: () => import('layouts/MyLayout.vue'),
-    children: [
-      { path: '', component: () => import('pages/Index.vue') }
-    ]
+    name: 'login',
+    component: Login,
+  },
+  {
+    path: '/home',
+    name: 'home',
+    component: Home,
   }
-]
-
-// Always leave this as last one
-if (process.env.MODE !== 'ssr') {
-  routes.push({
-    path: '*',
-    component: () => import('pages/Error404.vue')
-  })
-}
-
-export default routes
+];
