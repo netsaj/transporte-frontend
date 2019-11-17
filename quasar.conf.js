@@ -45,12 +45,17 @@ module.exports = function (ctx) {
       all: 'auto',
 
       components: [
-        'QForm'
+        'QForm',
+        'QDialog'
       ],
-      directives: [],
+      directives: [
+        'ClosePopup'
+      ],
 
       // Quasar plugins
-      plugins: []
+      plugins: [
+        'Loading'
+      ]
     },
 
     // https://quasar.dev/quasar-cli/cli-documentation/supporting-ie

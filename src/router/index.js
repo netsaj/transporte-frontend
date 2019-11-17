@@ -6,7 +6,7 @@ import routes from './routes'
 
 Vue.use(VueRouter)
 Vue.use(VueAxios, axios);
-Vue.axios.defaults.baseURL = 'https://xhacer.tk/api';
+Vue.axios.defaults.baseURL = localStorage.getItem('endpoint') === null ? 'https://transporte-backend.herokuapp.com/api/' : localStorage.getItem('endpoint');
 axios.defaults.headers.common['Authorization'] = localStorage.getItem('default_auth_token');
 /*
  * If not building with SSR mode, you can
