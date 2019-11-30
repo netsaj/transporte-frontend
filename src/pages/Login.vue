@@ -81,7 +81,7 @@
           password: _this.password
         })
           .then(function (response) {
-            console.log(response);
+            console.log(response.data);
             localStorage.setItem('default_auth_token', response.data.token);
             _this.$router.push('home');
           })

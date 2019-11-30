@@ -4,10 +4,10 @@ import axios from 'axios';
 import VueAxios from 'vue-axios';
 import routes from './routes'
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 Vue.use(VueAxios, axios);
 Vue.axios.defaults.baseURL = localStorage.getItem('endpoint') === null ? 'https://transporte-backend.herokuapp.com/api/' : localStorage.getItem('endpoint');
-axios.defaults.headers.common['Authorization'] = localStorage.getItem('default_auth_token');
+axios.defaults.headers.common['Authorization'] = 'Bearer '+localStorage.getItem('default_auth_token');
 /*
  * If not building with SSR mode, you can
  * directly export the Router instantiation

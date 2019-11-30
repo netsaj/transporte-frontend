@@ -46,7 +46,13 @@ module.exports = function (ctx) {
 
       components: [
         'QForm',
-        'QDialog'
+        'QDialog',
+        'QDrawer',
+        'QTable',
+        'QTh',
+        'QTr',
+        'QTd',
+        'QPopupEdit'
       ],
       directives: [
         'ClosePopup'
@@ -54,7 +60,8 @@ module.exports = function (ctx) {
 
       // Quasar plugins
       plugins: [
-        'Loading'
+        'Loading',
+        'Notify'
       ]
     },
 

@@ -1,6 +1,7 @@
 <template>
   <q-layout view="hHh lpR fFf">
     <NavBar page="Dashboard"></NavBar>
+    <Main></Main>
     <q-page-container>
       <div class="q-pa-md">
         <p class="text-h5">
@@ -13,10 +14,11 @@
 
 <script>
   import NavBar from "../components/NavBar";
+  import Main from "../components/Main";
 
   export default {
     name: "Home",
-    components: {NavBar},
+    components: {Main, NavBar},
     created() {
       this.user();
       this.optionsList();

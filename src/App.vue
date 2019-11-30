@@ -1,11 +1,18 @@
 <template>
-  <div id="q-app">
-    <router-view />
+  <div>
+    <div id="q-app" v-if="$auth.ready()">
+      <router-view/>
+    </div>
+    <div v-if="!$auth.ready()">
+      Cargando......
+    </div>
   </div>
+
+
 </template>
 
 <script>
-export default {
-  name: 'App'
-}
+  export default {
+    name: 'App'
+  }
 </script>
